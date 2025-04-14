@@ -1,15 +1,5 @@
-identifier: bt60_v1
-name: BT60 V1 Soldered
-type: mcu
-arch: arm
-toolchain:
-  - zephyr
-  - gnuarmemb
-  - xtools
-supported:
-  - adc
-  - usb_device
-  - ble
-  - ieee802154
-  - pwm
-  - watchdog
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  build:
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
